@@ -10,6 +10,7 @@ public class Fundraiser
 {
     public static int collect(int monataryGoal)
     {
+        System.out.println(monataryGoal);
         
         if(monataryGoal == 1)
         {
@@ -17,7 +18,7 @@ public class Fundraiser
         }
         else
         {
-            return monataryGoal + collect(monataryGoal/10); 
+            return collect(monataryGoal/10) + collect(monataryGoal/10) + collect(monataryGoal/10); //do this for 10; 
         }
     }
 }
