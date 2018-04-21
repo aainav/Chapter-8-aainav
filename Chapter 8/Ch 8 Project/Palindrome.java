@@ -2,29 +2,33 @@
 /**
  * Write a description of class Palindrome here.
  *
- * @author (your name)
+ * Aaina Vannan
  * @version (a version number or a date)
  */
 public class Palindrome
 {
-    public static int left = 0;
-    public static int right; 
-    public static boolean paliCheck(String str)
+    //public static int left = 0;
+    //public static int right; 
+    public static int length; 
+    public static boolean paliCheck(String str, int count)
     {
-        right = str.length() - 1; 
-        if (left > right)
+        length = str.length() - 1;
+        if (length == count)
         {
-            return false;
+            return true;
+        }
+        else if(str.charAt(count) == str.charAt(length - count))
+        {
+            return paliCheck(str, count+1);
         }
         else
         {
-            if (str.charAt(left) == str.charAt(right))
-            {
-                left--;
-                right++;
-                paliCheck(str);
-            }
-            return true;
+            return false; 
         }
     }
+    /*
+     * INPUT...OUTPUT:
+     * radar...true
+     * abcd...false
+     */
 }

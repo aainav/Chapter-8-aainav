@@ -13,7 +13,7 @@ public class PalindromeTester
         Scanner keyboard = new Scanner (System.in);
         System.out.println("String: ");
         String word = keyboard.nextLine();
-        boolean check = Palindrome.paliCheck(word);
+        boolean check = Palindrome.paliCheck(word, 0);
         System.out.println(check);
     }
 }
