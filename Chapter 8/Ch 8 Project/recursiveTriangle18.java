@@ -35,7 +35,7 @@ public class recursiveTriangle18 extends JApplet
    public void paint (Graphics page)
    {
 
-        page.setColor (Color.red);
+        page.setColor(Color.blue);
         page.drawPolyline (xPos, yPos, xPos.length);
 
         Triangle(xPos,yPos,page);
@@ -47,7 +47,7 @@ public class recursiveTriangle18 extends JApplet
         //Find the distance between 2 points ex. - x,y & x1,y1
        distance = Math.sqrt((Math.pow((xPos[1] - xPos[2]), 2) + Math.pow((yPos[1] - yPos[2]), 2)));
         //if the segment/distance is 20 or so, good length to stop
-        if (distance > 20)
+        if (distance > 9)
         {
             //find the mid points of each line segment !
             //make the x and y array (3 points + first point to finish triangle) !
@@ -84,7 +84,7 @@ public class recursiveTriangle18 extends JApplet
            
             //draw the Triangle
             page.setColor(Color.blue);
-            page.drawPolyline (midX, midY, midX.length);
+            page.drawPolyline (midX,midY, midX.length);
 
 
 
